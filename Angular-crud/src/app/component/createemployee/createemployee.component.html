@@ -1,0 +1,37 @@
+<div class="pt-8 mg-4">
+    <div class="shadow pt-3">
+        <div>
+            <a mat-button class="flex justify-end pt-3 mr-3" color="primary" href="/employee-list" target="_blank">Back</a>
+        </div>    
+       
+        <form [formGroup]="employeeForm" (ngSubmit)="Save()">
+    <div class="flex w-full flex-wrap">
+        <mat-form-field class="w-full">
+            <mat-label>Name</mat-label>
+            <input type="text" matInput placeholder="Name" formControlName="Name">
+          </mat-form-field>   
+          <mat-form-field class="w-full">
+            <mat-label>Age</mat-label>
+            <input type="text" matInput placeholder="Age" formControlName="Age">
+          </mat-form-field>   
+          <mat-form-field class="w-full">
+            <mat-label>Email</mat-label>
+            <input type="text" matInput placeholder="Email" formControlName="Email">
+          </mat-form-field>  
+          <mat-form-field class="w-full">
+            <mat-label>Phone</mat-label>
+            <input type="text" matInput placeholder="Phone" formControlName="PhoneNumber" >
+          </mat-form-field>  
+          <mat-form-field class="w-full">
+            <mat-label>salary</mat-label>
+            <input type="text" matInput placeholder="Salary" formControlName="Salary">
+          </mat-form-field>  
+    </div>
+    
+        <div class="flex justify-center">
+            <button mat-raised-button color="primary" [disabled]="!employeeForm.valid">{{btnName}}</button>
+        </div>
+    
+        </form>
+    </div>
+</div>
